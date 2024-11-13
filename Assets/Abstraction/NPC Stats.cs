@@ -12,6 +12,6 @@ public abstract class NPCStats : MonoBehaviour
 
     protected abstract void Movement();
 
-    protected abstract void Attack();
+    protected abstract void TookDamage();
 
 }

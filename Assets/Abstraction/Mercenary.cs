@@ -7,10 +7,9 @@ public class Mercenary : NPCStats
     private void Start()
     {
         Movement();
-        Attack();
-            
+        TookDamage();
     }
-    protected override void Attack()
+    protected override void TookDamage()
     {
         Debug.Log("Mercenary hits Archer");
     }

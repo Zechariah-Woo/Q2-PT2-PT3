@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public interface DamageInterface
+public class IDamagable : MonoBehaviour
 {
-    void Damage(int damage);
+
 }

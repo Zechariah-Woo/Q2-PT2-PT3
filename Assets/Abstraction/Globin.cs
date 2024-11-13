@@ -6,14 +6,14 @@ public class Goblin : NPCStats
 
 
 {
-    [SerializeField] private Mercenary mercenary;
+    [SerializeField] private Archer archer;
 
     private void Start()
     {
        
         Movement();
-        Attack();
-        Damage(15);
+        TookDamage();
+        Damage(30);
     }
 
     protected override void Movement()
@@ -21,14 +21,16 @@ public class Goblin : NPCStats
         Debug.Log("Goblin moves");
     }
     
-    protected override void Attack()
+    protected override void TookDamage()
     {
-        Debug.Log("Goblin Attacks player");
+        Debug.Log("Goblin got punched");
     }
 
     public void Damage (int Damage)
     {
+
+        Debug.Log("Goblin Health: " + health);
         health -= Damage;
-        Debug.Log("Goblin health: " + health);
+        Debug.Log("Goblin new health: " + health);
     }
 }
